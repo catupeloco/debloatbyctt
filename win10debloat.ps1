@@ -51,12 +51,6 @@ $installchoco.height             = 115
 $installchoco.location           = New-Object System.Drawing.Point(16,19)
 $installchoco.Font               = New-Object System.Drawing.Font('Microsoft Sans Serif',16)
 
-$brave                           = New-Object system.Windows.Forms.Button
-$brave.text                      = "Brave Browser"
-$brave.width                     = 150
-$brave.height                    = 30
-$brave.location                  = New-Object System.Drawing.Point(250,19)
-$brave.Font                      = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $firefox                         = New-Object system.Windows.Forms.Button
 $firefox.text                    = "Firefox"
@@ -429,11 +423,6 @@ $installchoco.Add_Click({
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
-$brave.Add_Click({ 
-	Write-Host "Installing Brave Browser"
-	choco install brave -y
-	    $wshell.Popup("Operation Completed",0,"Done",0x0)	
-})
 
 $firefox.Add_Click({ 
     Write-Host "Installing Firefox"
