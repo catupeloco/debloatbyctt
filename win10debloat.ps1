@@ -59,6 +59,13 @@ $firefox.height                  = 30
 $firefox.location                = New-Object System.Drawing.Point(250,61)
 $firefox.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
+$adobereader                     = New-Object system.Windows.Forms.Button
+$adobereader.text                = "Adobe Reader DC"
+$adobereader.width               = 150
+$adobereader.height              = 30
+$adobereader.location            = New-Object System.Drawing.Point(417,61)
+$adobereader.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
+
 $7zip                            = New-Object system.Windows.Forms.Button
 $7zip.text                       = "7-Zip"
 $7zip.width                      = 150
@@ -66,19 +73,20 @@ $7zip.height                     = 30
 $7zip.location                   = New-Object System.Drawing.Point(584,104)
 $7zip.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
-$irfanview                       = New-Object system.Windows.Forms.Button
-$irfanview.text                  = "Off servicios"
-$irfanview.width                 = 150
-$irfanview.height                = 30
-$irfanview.location              = New-Object System.Drawing.Point(417,19)
-$irfanview.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
+$offservices                     = New-Object system.Windows.Forms.Button
+$offservices.text                = "Off services"
+$offservices.width               = 150
+$offservices.height              = 30
+$offservices.location            = New-Object System.Drawing.Point(250,19)
+$offservices.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
-$adobereader                     = New-Object system.Windows.Forms.Button
-$adobereader.text                = "Adobe Reader DC"
-$adobereader.width               = 150
-$adobereader.height              = 30
-$adobereader.location            = New-Object System.Drawing.Point(417,61)
-$adobereader.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
+$onservices                      = New-Object system.Windows.Forms.Button
+$onservices.text                 = "On services"
+$onservices.width                = 150
+$onservices.height               = 30
+$onservices.location             = New-Object System.Drawing.Point(417,19)
+$onservices.Font                 = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
+
 
 $notepad                         = New-Object system.Windows.Forms.Button
 $notepad.text                    = "Notepad++"
@@ -108,12 +116,7 @@ $vlc.height                      = 30
 $vlc.location                    = New-Object System.Drawing.Point(584,19)
 $vlc.Font                        = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
-$powertoys                       = New-Object system.Windows.Forms.Button
-$powertoys.text                  = "PowerToys"
-$powertoys.width                 = 150
-$powertoys.height                = 30
-$powertoys.location              = New-Object System.Drawing.Point(751,105)
-$powertoys.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
+
 
 $winterminal                     = New-Object system.Windows.Forms.Button
 $winterminal.text                = "Windows Terminal"
@@ -410,7 +413,7 @@ $lightmode.location              = New-Object System.Drawing.Point(417,45)
 $lightmode.Font                  = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $Form.controls.AddRange(@($Panel1,$Label1,$Panel2,$Label3,$Panel3,$Label4,$Label15,$Panel4,$Label20,$Label21,$Label23,$PictureBox1))
-$Panel1.controls.AddRange(@($installchoco,$firefox,$7zip,$irfanview,$adobereader,$notepad,$gchrome,$mpc,$vlc,$powertoys,$winterminal,$vscode,$Label2))
+$Panel1.controls.AddRange(@($installchoco,$firefox,$7zip,$offservices,$adobereader,$notepad,$gchrome,$mpc,$vlc,$onservices,$winterminal,$vscode,$Label2))
 $Panel2.controls.AddRange(@($essentialtweaks,$backgroundapps,$cortana,$windowssearch,$actioncenter,$darkmode,$visualfx,$onedrive,$Label22,$lightmode))
 $Panel3.controls.AddRange(@($securitylow,$securityhigh,$Label5,$Label6,$Label7,$Label8,$Label9,$Label10,$Label11,$Label12,$Label13))
 $Panel4.controls.AddRange(@($defaultwindowsupdate,$securitywindowsupdate,$Label16,$Label17,$Label18,$Label19))
@@ -436,9 +439,21 @@ $gchrome.Add_Click({
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
-$irfanview.Add_Click({ 
-    Write-Host "Installing Irfanview (Image Viewer)"
-    choco install irfanview -y
+$offservices.Add_Click({ 
+    Write-Host "Installing offservices (Image Viewer)"
+    
+	
+	
+	
+	
+	choco install offservices -y
+	
+	
+	
+	
+	
+	
+	
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
@@ -484,9 +499,16 @@ $winterminal.Add_Click({
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
-$powertoys.Add_Click({ 
-    Write-Host "Installing Microsoft PowerToys"
-    choco install powertoys -y
+$onservices.Add_Click({ 
+    Write-Host "Installing Microsoft onservices"
+	
+	
+    
+	
+	choco install onservices -y
+	
+	
+	
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
