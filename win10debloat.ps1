@@ -117,7 +117,6 @@ $vlc.location                    = New-Object System.Drawing.Point(584,19)
 $vlc.Font                        = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 
-
 $winterminal                     = New-Object system.Windows.Forms.Button
 $winterminal.text                = "Windows Terminal"
 $winterminal.width               = 150
@@ -440,15 +439,87 @@ $gchrome.Add_Click({
 })
 
 $offservices.Add_Click({ 
-    Write-Host "Installing offservices (Image Viewer)"
+    Write-Host "Deshabilitando servicios"
+    Write-Host "Stopping and disabling mpssvc services..."
+	Stop-Service "mpssvc" -WarningAction SilentlyContinue
+	Set-Service "mpssvc" -StartupType Disabled
+    Write-Host "Stopping and disabling WinDefend services..."
+	Stop-Service "WinDefend" -WarningAction SilentlyContinue
+	Set-Service "WinDefend" -StartupType Disabled
+    Write-Host "Stopping and disabling Fax services..."
+	Stop-Service "Fax" -WarningAction SilentlyContinue
+	Set-Service "Fax" -StartupType Disabled
+    Write-Host "Stopping and disabling lmhosts services..."
+	Stop-Service "lmhosts" -WarningAction SilentlyContinue
+	Set-Service "lmhosts" -StartupType Disabled
+    Write-Host "Stopping and disabling iphlpsvc services..."
+	Stop-Service "iphlpsvc" -WarningAction SilentlyContinue
+	Set-Service "iphlpsvc" -StartupType Disabled
+    Write-Host "Stopping and disabling CscService services..."
+	Stop-Service "CscService" -WarningAction SilentlyContinue
+	Set-Service "CscService" -StartupType Disabled
+    Write-Host "Stopping and disabling bthserv services..."
+	Stop-Service "bthserv" -WarningAction SilentlyContinue
+	Set-Service "bthserv" -StartupType Disabled
+    Write-Host "Stopping and disabling Spooler services..."
+	Stop-Service "Spooler" -WarningAction SilentlyContinue
+	Set-Service "Spooler" -StartupType Disabled
+    Write-Host "Stopping and disabling SessionEnv services..."
+	Stop-Service "SessionEnv" -WarningAction SilentlyContinue
+	Set-Service "SessionEnv" -StartupType Disabled
+    Write-Host "Stopping and disabling TermService services..."
+	Stop-Service "TermService" -WarningAction SilentlyContinue
+	Set-Service "TermService" -StartupType Disabled
+    Write-Host "Stopping and disabling wisvc services..."
+	Stop-Service "wisvc" -WarningAction SilentlyContinue
+	Set-Service "wisvc" -StartupType Disabled
+	Write-Host "Stopping and disabling lfsvc services..."
+	Stop-Service "lfsvc" -WarningAction SilentlyContinue
+	Set-Service "lfsvc" -StartupType Disabled
+	Write-Host "Stopping and disabling seclogon services..."
+	Stop-Service "seclogon" -WarningAction SilentlyContinue
+	Set-Service "seclogon" -StartupType Disabled
+	Write-Host "Stopping and disabling TabletInputService services..."
+	Stop-Service "TabletInputService" -WarningAction SilentlyContinue
+	Set-Service "TabletInputService" -StartupType Disabled
+	Write-Host "Stopping and disabling CscService services..."
+	Stop-Service "CscService" -WarningAction SilentlyContinue
+	Set-Service "CscService" -StartupType Disabled
+	Write-Host "Stopping and disabling WbioSrvc services..."
+	Stop-Service "WbioSrvc" -WarningAction SilentlyContinue
+	Set-Service "WbioSrvc" -StartupType Disabled
+	Write-Host "Stopping and disabling RemoteRegistry services..."
+	Stop-Service "RemoteRegistry" -WarningAction SilentlyContinue
+	Set-Service "RemoteRegistry" -StartupType Disabled
+	Write-Host "Stopping and disabling ALG services..."
+	Stop-Service "ALG" -WarningAction SilentlyContinue
+	Set-Service "ALG" -StartupType Disabled
+	Write-Host "Stopping and disabling SCardSvr services..."
+	Stop-Service "SCardSvr" -WarningAction SilentlyContinue
+	Set-Service "SCardSvr" -StartupType Disabled
+	Write-Host "Stopping and disabling stisvc services..."
+	Stop-Service "stisvc" -WarningAction SilentlyContinue
+	Set-Service "stisvc" -StartupType Disabled
+	Write-Host "Stopping and disabling wscsvc services..."
+	Stop-Service "wscsvc" -WarningAction SilentlyContinue
+	Set-Service "wscsvc" -StartupType Disabled
+	Write-Host "Stopping and disabling DiagTrack services..."
+	Stop-Service "DiagTrack" -WarningAction SilentlyContinue
+	Set-Service "DiagTrack" -StartupType Disabled
+	Write-Host "Stopping and disabling AJRouter services..."
+	Stop-Service "AJRouter" -WarningAction SilentlyContinue
+	Set-Service "AJRouter" -StartupType Disabled
+	Write-Host "Stopping and disabling PcaSvc services..."
+	Stop-Service "PcaSvc" -WarningAction SilentlyContinue
+	Set-Service "PcaSvc" -StartupType Disabled	
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
+})
+
+$onservices.Add_Click({ 
+    Write-Host "Habilitando servicios"
+	
+	
     
-	
-	
-	
-	
-	choco install offservices -y
-	
-	
 	
 	
 	
@@ -499,18 +570,7 @@ $winterminal.Add_Click({
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
-$onservices.Add_Click({ 
-    Write-Host "Installing Microsoft onservices"
-	
-	
-    
-	
-	choco install onservices -y
-	
-	
-	
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
-})
+
 
 $essentialtweaks.Add_Click({ 
     Write-Host "Creating Restore Point incase something bad happens"
