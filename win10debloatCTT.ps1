@@ -436,15 +436,16 @@ $onservices           = New-Object system.Windows.Forms.Button
 $onservices.text      = "onservices"
 $onservices.width     = 300
 $onservices.height    = 30
-$onservices.location  = New-Object System.Drawing.Point(24,561)
+$onservices.location  = New-Object System.Drawing.Point(24,300)
 $onservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
 $offservices           = New-Object system.Windows.Forms.Button
 $offservices.text      = "onservices"
 $offservices.width     = 300
 $offservices.height    = 30
-$offservices.location  = New-Object System.Drawing.Point(24,500)
+$offservices.location  = New-Object System.Drawing.Point(24,340)
 $offservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
+#$RBackgroundApps.location        = New-Object System.Drawing.Point(4,139)
 #$securitywindowsupdate.location  = New-Object System.Drawing.Point(24,142)
 #$sumatrapdf.location             = New-Object System.Drawing.Point(3,561)
 #########catupeloco#############################
