@@ -440,76 +440,76 @@ $gchrome.Add_Click({
 
 $offservices.Add_Click({ 
     Write-Host "Deshabilitando servicios"
-    Write-Host "Stopping and disabling mpssvc services..."
+    Write-Host "Stopping and disabling mpssvc service..."
 	Stop-Service "mpssvc" -WarningAction SilentlyContinue
 	Set-Service "mpssvc" -StartupType Disabled
-    Write-Host "Stopping and disabling WinDefend services..."
+    Write-Host "Stopping and disabling WinDefend service..."
 	Stop-Service "WinDefend" -WarningAction SilentlyContinue
 	Set-Service "WinDefend" -StartupType Disabled
-    Write-Host "Stopping and disabling Fax services..."
+    Write-Host "Stopping and disabling Fax service..."
 	Stop-Service "Fax" -WarningAction SilentlyContinue
 	Set-Service "Fax" -StartupType Disabled
-    Write-Host "Stopping and disabling lmhosts services..."
+    Write-Host "Stopping and disabling lmhosts service..."
 	Stop-Service "lmhosts" -WarningAction SilentlyContinue
 	Set-Service "lmhosts" -StartupType Disabled
-    Write-Host "Stopping and disabling iphlpsvc services..."
+    Write-Host "Stopping and disabling iphlpsvc service..."
 	Stop-Service "iphlpsvc" -WarningAction SilentlyContinue
 	Set-Service "iphlpsvc" -StartupType Disabled
-    Write-Host "Stopping and disabling CscService services..."
+    Write-Host "Stopping and disabling CscService service..."
 	Stop-Service "CscService" -WarningAction SilentlyContinue
 	Set-Service "CscService" -StartupType Disabled
-    Write-Host "Stopping and disabling bthserv services..."
+    Write-Host "Stopping and disabling bthserv service..."
 	Stop-Service "bthserv" -WarningAction SilentlyContinue
 	Set-Service "bthserv" -StartupType Disabled
-    Write-Host "Stopping and disabling Spooler services..."
+    Write-Host "Stopping and disabling Spooler service..."
 	Stop-Service "Spooler" -WarningAction SilentlyContinue
 	Set-Service "Spooler" -StartupType Disabled
-    Write-Host "Stopping and disabling SessionEnv services..."
+    Write-Host "Stopping and disabling SessionEnv service..."
 	Stop-Service "SessionEnv" -WarningAction SilentlyContinue
 	Set-Service "SessionEnv" -StartupType Disabled
-    Write-Host "Stopping and disabling TermService services..."
+    Write-Host "Stopping and disabling TermService service..."
 	Stop-Service "TermService" -WarningAction SilentlyContinue
 	Set-Service "TermService" -StartupType Disabled
-    Write-Host "Stopping and disabling wisvc services..."
+    Write-Host "Stopping and disabling wisvc service..."
 	Stop-Service "wisvc" -WarningAction SilentlyContinue
 	Set-Service "wisvc" -StartupType Disabled
-	Write-Host "Stopping and disabling lfsvc services..."
+	Write-Host "Stopping and disabling lfsvc service..."
 	Stop-Service "lfsvc" -WarningAction SilentlyContinue
 	Set-Service "lfsvc" -StartupType Disabled
-	Write-Host "Stopping and disabling seclogon services..."
+	Write-Host "Stopping and disabling seclogon service..."
 	Stop-Service "seclogon" -WarningAction SilentlyContinue
 	Set-Service "seclogon" -StartupType Disabled
-	Write-Host "Stopping and disabling TabletInputService services..."
+	Write-Host "Stopping and disabling TabletInputService service..."
 	Stop-Service "TabletInputService" -WarningAction SilentlyContinue
 	Set-Service "TabletInputService" -StartupType Disabled
-	Write-Host "Stopping and disabling CscService services..."
+	Write-Host "Stopping and disabling CscService service..."
 	Stop-Service "CscService" -WarningAction SilentlyContinue
 	Set-Service "CscService" -StartupType Disabled
-	Write-Host "Stopping and disabling WbioSrvc services..."
+	Write-Host "Stopping and disabling WbioSrvc service..."
 	Stop-Service "WbioSrvc" -WarningAction SilentlyContinue
 	Set-Service "WbioSrvc" -StartupType Disabled
-	Write-Host "Stopping and disabling RemoteRegistry services..."
+	Write-Host "Stopping and disabling RemoteRegistry service..."
 	Stop-Service "RemoteRegistry" -WarningAction SilentlyContinue
 	Set-Service "RemoteRegistry" -StartupType Disabled
-	Write-Host "Stopping and disabling ALG services..."
+	Write-Host "Stopping and disabling ALG service..."
 	Stop-Service "ALG" -WarningAction SilentlyContinue
 	Set-Service "ALG" -StartupType Disabled
-	Write-Host "Stopping and disabling SCardSvr services..."
+	Write-Host "Stopping and disabling SCardSvr service..."
 	Stop-Service "SCardSvr" -WarningAction SilentlyContinue
 	Set-Service "SCardSvr" -StartupType Disabled
-	Write-Host "Stopping and disabling stisvc services..."
+	Write-Host "Stopping and disabling stisvc service..."
 	Stop-Service "stisvc" -WarningAction SilentlyContinue
 	Set-Service "stisvc" -StartupType Disabled
-	Write-Host "Stopping and disabling wscsvc services..."
+	Write-Host "Stopping and disabling wscsvc service..."
 	Stop-Service "wscsvc" -WarningAction SilentlyContinue
 	Set-Service "wscsvc" -StartupType Disabled
-	Write-Host "Stopping and disabling DiagTrack services..."
+	Write-Host "Stopping and disabling DiagTrack service..."
 	Stop-Service "DiagTrack" -WarningAction SilentlyContinue
 	Set-Service "DiagTrack" -StartupType Disabled
-	Write-Host "Stopping and disabling AJRouter services..."
+	Write-Host "Stopping and disabling AJRouter service..."
 	Stop-Service "AJRouter" -WarningAction SilentlyContinue
 	Set-Service "AJRouter" -StartupType Disabled
-	Write-Host "Stopping and disabling PcaSvc services..."
+	Write-Host "Stopping and disabling PcaSvc service..."
 	Stop-Service "PcaSvc" -WarningAction SilentlyContinue
 	Set-Service "PcaSvc" -StartupType Disabled	
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
