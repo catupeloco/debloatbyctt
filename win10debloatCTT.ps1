@@ -645,8 +645,10 @@ $essentialtweaks.Add_Click({
     Write-Host "Stopping and disabling Superfetch service..."
     Stop-Service "SysMain" -WarningAction SilentlyContinue
     Set-Service "SysMain" -StartupType Disabled
-    Write-Host "Setting BIOS time to UTC..."
-    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" -Name "RealTimeIsUniversal" -Type DWord -Value 1
+	####################catupeloco#############################
+    <#Write-Host "Setting BIOS time to UTC..."
+    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" -Name "RealTimeIsUniversal" -Type DWord -Value 1#>
+	####################catupeloco#############################
     Write-Host "Disabling Hibernation..."
     Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Session Manager\Power" -Name "HibernteEnabled" -Type Dword -Value 0
     If (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings")) {
@@ -676,7 +678,8 @@ $essentialtweaks.Add_Click({
     Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People" -Name "PeopleBand" -Type DWord -Value 0
     Write-Host "Showing all tray icons..."
     Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" -Name "EnableAutoTray" -Type DWord -Value 0
-    Write-Host "Enabling NumLock after startup..."
+    ####################catupeloco#############################
+	<#Write-Host "Enabling NumLock after startup..."
     If (!(Test-Path "HKU:")) {
         New-PSDrive -Name HKU -PSProvider Registry -Root HKEY_USERS | Out-Null
     }
@@ -685,8 +688,8 @@ $essentialtweaks.Add_Click({
     If (!([System.Windows.Forms.Control]::IsKeyLocked('NumLock'))) {
         $wsh = New-Object -ComObject WScript.Shell
         $wsh.SendKeys('{NUMLOCK}')
-    }
-
+    }#>
+    ####################catupeloco#############################
     Write-Host "Changing default Explorer view to This PC..."
     Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "LaunchTo" -Type DWord -Value 1
 
@@ -795,8 +798,10 @@ $essentialundo.Add_Click({
     Write-Host "Allowing Superfetch service..."
     Stop-Service "SysMain" -WarningAction SilentlyContinue
     Set-Service "SysMain" -StartupType Manual
-    Write-Host "Setting BIOS time to Local Time instead of UTC..."
-    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" -Name "RealTimeIsUniversal" -Type DWord -Value 0
+	####################catupeloco#############################
+    <#Write-Host "Setting BIOS time to Local Time instead of UTC..."
+    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" -Name "RealTimeIsUniversal" -Type DWord -Value 0#>
+	####################catupeloco#############################
     Write-Host "Enabling Hibernation..."
     Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Session Manager\Power" -Name "HibernteEnabled" -Type Dword -Value 1
     Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" -Name "ShowHibernateOption" -Type Dword -Value 1
@@ -982,7 +987,9 @@ $Bloatware = @(
     "Microsoft.WindowsFeedbackHub"
     "Microsoft.WindowsMaps"
     "Microsoft.WindowsPhone"
-    "Microsoft.WindowsSoundRecorder"
+	####################catupeloco#############################
+    #"Microsoft.WindowsSoundRecorder"
+	####################catupeloco#############################
     "Microsoft.XboxApp"
     "Microsoft.ConnectivityStore"
     "Microsoft.CommsPhone"
@@ -1245,8 +1252,8 @@ $InstallOneDrive.Add_Click({
     Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\OneDrive" -Name "DisableFileSyncNGSC" -ErrorAction SilentlyContinue
     %systemroot%\SysWOW64\OneDriveSetup.exe
 })
-
-$DisableNumLock.Add_Click({
+####################catupeloco#############################
+<#$DisableNumLock.Add_Click({
     Write-Host "Disable NumLock after startup..."
     Set-ItemProperty -Path "HKU:\.DEFAULT\Control Panel\Keyboard" -Name "InitialKeyboardIndicators" -Type DWord -Value 0
     Add-Type -AssemblyName System.Windows.Forms
@@ -1254,8 +1261,8 @@ $DisableNumLock.Add_Click({
         $wsh = New-Object -ComObject WScript.Shell
         $wsh.SendKeys('{NUMLOCK}')
     }
-})
-
+})#>
+####################catupeloco#############################
 $yourphonefix.Add_Click({
     Write-Host "Reinstalling Your Phone App"
     Add-AppxPackage -DisableDevelopmentMode -Register "$($(Get-AppXPackage -AllUsers "Microsoft.YourPhone").InstallLocation)\AppXManifest.xml"
