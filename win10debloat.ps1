@@ -67,7 +67,7 @@ $7zip.location                   = New-Object System.Drawing.Point(584,104)
 $7zip.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $irfanview                       = New-Object system.Windows.Forms.Button
-$irfanview.text                  = "Irfanview tu vieja"
+$irfanview.text                  = "Deshab serv Javi"
 $irfanview.width                 = 150
 $irfanview.height                = 30
 $irfanview.location              = New-Object System.Drawing.Point(417,19)
