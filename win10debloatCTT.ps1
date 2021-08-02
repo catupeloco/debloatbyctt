@@ -293,8 +293,8 @@ $Label19.location                = New-Object System.Drawing.Point(63,126)
 $Label19.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $PictureBox1                     = New-Object system.Windows.Forms.PictureBox
-$PictureBox1.width               = 100 #412
-$PictureBox1.height              = 50 #125
+$PictureBox1.width               = 412
+$PictureBox1.height              = 125
 $PictureBox1.location            = New-Object System.Drawing.Point(247,500)
 $PictureBox1.imageLocation       = "https://github.com/ChrisTitusTech/win10script/blob/master/titus-toolbox.png?raw=true"
 $PictureBox1.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom
@@ -433,17 +433,17 @@ $reinstallbloat.location         = New-Object System.Drawing.Point(4, 374)
 $reinstallbloat.Font             = New-Object System.Drawing.Font("Microsoft Sans Serif",12)
 #########catupeloco#############################
 $onservices           = New-Object system.Windows.Forms.Button
-$onservices.text      = "onservices"
+$onservices.text      = "on services"
 $onservices.width     = 300
 $onservices.height    = 30
-$onservices.location  = New-Object System.Drawing.Point(24,300)
+$onservices.location  = New-Object System.Drawing.Point(24,185)
 $onservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
 $offservices           = New-Object system.Windows.Forms.Button
-$offservices.text      = "onservices"
+$offservices.text      = "off services"
 $offservices.width     = 300
 $offservices.height    = 30
-$offservices.location  = New-Object System.Drawing.Point(24,440)
+$offservices.location  = New-Object System.Drawing.Point(24,150)
 $offservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 #$PictureBox1.location            = New-Object System.Drawing.Point(247,500)
 #$RBackgroundApps.location        = New-Object System.Drawing.Point(4,139)
