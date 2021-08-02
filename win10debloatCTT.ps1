@@ -434,14 +434,14 @@ $reinstallbloat.Font             = New-Object System.Drawing.Font("Microsoft San
 #########catupeloco#############################
 $onservices           = New-Object system.Windows.Forms.Button
 $onservices.text      = "onservices"
-$onservices.width     = 300
+$onservices.width     = 200
 $onservices.height    = 30
 $onservices.location  = New-Object System.Drawing.Point(247,300)
 $onservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
 $offservices           = New-Object system.Windows.Forms.Button
 $offservices.text      = "onservices"
-$offservices.width     = 300
+$offservices.width     = 200
 $offservices.height    = 30
 $offservices.location  = New-Object System.Drawing.Point(247,440)
 $offservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
