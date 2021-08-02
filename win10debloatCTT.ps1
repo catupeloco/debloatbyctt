@@ -60,7 +60,7 @@ $Form.Icon                    = [System.Drawing.Icon]::FromHandle((New-Object Sy
 $Form.Width                   = $objImage.Width
 $Form.Height                  = $objImage.Height
 
-<#$Panel1                          = New-Object system.Windows.Forms.Panel
+$Panel1                          = New-Object system.Windows.Forms.Panel
 $Panel1.height                   = 639
 $Panel1.width                    = 219
 $Panel1.location                 = New-Object System.Drawing.Point(6,54)
@@ -430,7 +430,7 @@ $reinstallbloat.text             = "Reinstall Bloatware"
 $reinstallbloat.width            = 211
 $reinstallbloat.height           = 30
 $reinstallbloat.location         = New-Object System.Drawing.Point(4, 374)
-$reinstallbloat.Font             = New-Object System.Drawing.Font("Microsoft Sans Serif",12)#>
+$reinstallbloat.Font             = New-Object System.Drawing.Font("Microsoft Sans Serif",12)
 #########catupeloco#############################
 $onservices           = New-Object system.Windows.Forms.Button
 $onservices.text      = "onservices"
