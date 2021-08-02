@@ -242,7 +242,7 @@ $Label15.location                = New-Object System.Drawing.Point(739,11)
 $Label15.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',24)
 
 $Panel4                          = New-Object system.Windows.Forms.Panel
-$Panel4.height                   = 179
+$Panel4.height                   = 600 #179
 $Panel4.width                    = 340
 $Panel4.location                 = New-Object System.Drawing.Point(699,55)
 
