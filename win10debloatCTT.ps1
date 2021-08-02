@@ -315,7 +315,7 @@ $Label1.location                 = New-Object System.Drawing.Point(76,11)
 $Label1.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',24)
 
 $Label4                          = New-Object system.Windows.Forms.Label
-$Label4.text                     = "Undo 1"
+$Label4.text                     = "Undo 2"
 $Label4.AutoSize                 = $true
 $Label4.width                    = 230
 $Label4.height                   = 25
@@ -435,7 +435,7 @@ $reinstallbloat.Font             = New-Object System.Drawing.Font("Microsoft San
 $Panel5                          = New-Object system.Windows.Forms.Panel
 $Panel5.height                   = 179
 $Panel5.width                    = 340
-$Panel5.location                 = New-Object System.Drawing.Point(800,250)
+$Panel5.location                 = New-Object System.Drawing.Point(0,0)
 #$Panel4.location                 = New-Object System.Drawing.Point(699,55)
 
 $offservices           = New-Object system.Windows.Forms.Button
