@@ -436,14 +436,14 @@ $onservices           = New-Object system.Windows.Forms.Button
 $onservices.text      = "onservices"
 $onservices.width     = 200
 $onservices.height    = 30
-$onservices.location  = New-Object System.Drawing.Point(247,300)
+$onservices.location  = New-Object System.Drawing.Point(180,300)
 $onservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
 $offservices           = New-Object system.Windows.Forms.Button
 $offservices.text      = "onservices"
 $offservices.width     = 200
 $offservices.height    = 30
-$offservices.location  = New-Object System.Drawing.Point(247,440)
+$offservices.location  = New-Object System.Drawing.Point(180,440)
 $offservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 #$PictureBox1.location            = New-Object System.Drawing.Point(247,500)
 #$RBackgroundApps.location        = New-Object System.Drawing.Point(4,139)
