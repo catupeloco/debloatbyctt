@@ -315,7 +315,7 @@ $Label1.location                 = New-Object System.Drawing.Point(76,11)
 $Label1.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',24)
 
 $Label4                          = New-Object system.Windows.Forms.Label
-$Label4.text                     = "Undo"
+$Label4.text                     = "Undo 1"
 $Label4.AutoSize                 = $true
 $Label4.width                    = 230
 $Label4.height                   = 25
