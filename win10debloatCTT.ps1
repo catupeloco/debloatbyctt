@@ -292,12 +292,12 @@ $Label19.height                  = 10
 $Label19.location                = New-Object System.Drawing.Point(63,126)
 $Label19.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
-<#$PictureBox1                     = New-Object system.Windows.Forms.PictureBox
+$PictureBox1                     = New-Object system.Windows.Forms.PictureBox
 $PictureBox1.width               = 100 #412
 $PictureBox1.height              = 50 #125
 $PictureBox1.location            = New-Object System.Drawing.Point(247,500)
 $PictureBox1.imageLocation       = "https://github.com/ChrisTitusTech/win10script/blob/master/titus-toolbox.png?raw=true"
-$PictureBox1.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom#>
+$PictureBox1.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom
 
 $lightmode                       = New-Object system.Windows.Forms.Button
 $lightmode.text                  = "Light Mode"
@@ -434,16 +434,16 @@ $reinstallbloat.Font             = New-Object System.Drawing.Font("Microsoft San
 #########catupeloco#############################
 $onservices           = New-Object system.Windows.Forms.Button
 $onservices.text      = "onservices"
-$onservices.width     = 200
+$onservices.width     = 300
 $onservices.height    = 30
-$onservices.location  = New-Object System.Drawing.Point(180,300)
+$onservices.location  = New-Object System.Drawing.Point(24,300)
 $onservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
 $offservices           = New-Object system.Windows.Forms.Button
 $offservices.text      = "onservices"
-$offservices.width     = 200
+$offservices.width     = 300
 $offservices.height    = 30
-$offservices.location  = New-Object System.Drawing.Point(180,440)
+$offservices.location  = New-Object System.Drawing.Point(24,440)
 $offservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 #$PictureBox1.location            = New-Object System.Drawing.Point(247,500)
 #$RBackgroundApps.location        = New-Object System.Drawing.Point(4,139)
