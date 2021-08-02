@@ -242,7 +242,7 @@ $Label15.location                = New-Object System.Drawing.Point(739,11)
 $Label15.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',24)
 
 $Panel4                          = New-Object system.Windows.Forms.Panel
-$Panel4.height                   = 600 #179
+$Panel4.height                   = 179
 $Panel4.width                    = 340
 $Panel4.location                 = New-Object System.Drawing.Point(699,55)
 
@@ -432,24 +432,26 @@ $reinstallbloat.height           = 30
 $reinstallbloat.location         = New-Object System.Drawing.Point(4, 374)
 $reinstallbloat.Font             = New-Object System.Drawing.Font("Microsoft Sans Serif",12)
 #########catupeloco#############################
+$Panel5                          = New-Object system.Windows.Forms.Panel
+$Panel5.height                   = 179
+$Panel5.width                    = 340
+$Panel5.location                 = New-Object System.Drawing.Point(699,250)
+
+
 $offservices           = New-Object system.Windows.Forms.Button
 $offservices.text      = "off services"
 $offservices.width     = 300
 $offservices.height    = 30
-$offservices.location  = New-Object System.Drawing.Point(24,180)
+$offservices.location  = New-Object System.Drawing.Point(24,26)
 $offservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
 $onservices           = New-Object system.Windows.Forms.Button
 $onservices.text      = "on services"
 $onservices.width     = 300
 $onservices.height    = 30
-$onservices.location  = New-Object System.Drawing.Point(24,215)
+$onservices.location  = New-Object System.Drawing.Point(24,60)
 $onservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
-
-#$PictureBox1.location            = New-Object System.Drawing.Point(247,500)
-#$RBackgroundApps.location        = New-Object System.Drawing.Point(4,139)
-#$securitywindowsupdate.location  = New-Object System.Drawing.Point(24,142)
-#$sumatrapdf.location             = New-Object System.Drawing.Point(3,561)
+$Panel5.controls.AddRange(@($offservices,$onservices))
 #########catupeloco#############################
 
 $Form.controls.AddRange(@($Panel1,$Panel2,$Label3,$Label15,$Panel4,$PictureBox1,$Label1,$Label4,$Panel3))
@@ -457,6 +459,8 @@ $Panel1.controls.AddRange(@($brave,$firefox,$7zip,$irfanview,$adobereader,$notep
 $Panel2.controls.AddRange(@($essentialtweaks,$backgroundapps,$cortana,$actioncenter,$darkmode,$visualfx,$onedrive,$lightmode,$removebloat,$windowssearch))
 $Panel4.controls.AddRange(@($defaultwindowsupdate,$securitywindowsupdate,$Label16,$Label17,$Label18,$Label19,$onservices,$offservices))
 $Panel3.controls.AddRange(@($essentialundo,$EActionCenter,$ECortana,$RBackgroundApps,$HTrayIcons,$EClipboardHistory,$ELocation,$InstallOneDrive,$yourphonefix,$reinstallbloat))
+
+
 
 $brave.Add_Click({
     Write-Host "Installing Brave Browser"
