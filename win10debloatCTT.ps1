@@ -432,19 +432,20 @@ $reinstallbloat.height           = 30
 $reinstallbloat.location         = New-Object System.Drawing.Point(4, 374)
 $reinstallbloat.Font             = New-Object System.Drawing.Font("Microsoft Sans Serif",12)
 #########catupeloco#############################
-$onservices           = New-Object system.Windows.Forms.Button
-$onservices.text      = "on services"
-$onservices.width     = 300
-$onservices.height    = 30
-$onservices.location  = New-Object System.Drawing.Point(24,185)
-$onservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
-
 $offservices           = New-Object system.Windows.Forms.Button
 $offservices.text      = "off services"
 $offservices.width     = 300
 $offservices.height    = 30
-$offservices.location  = New-Object System.Drawing.Point(24,150)
+$offservices.location  = New-Object System.Drawing.Point(24,180)
 $offservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
+
+$onservices           = New-Object system.Windows.Forms.Button
+$onservices.text      = "on services"
+$onservices.width     = 300
+$onservices.height    = 30
+$onservices.location  = New-Object System.Drawing.Point(24,215)
+$onservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
+
 #$PictureBox1.location            = New-Object System.Drawing.Point(247,500)
 #$RBackgroundApps.location        = New-Object System.Drawing.Point(4,139)
 #$securitywindowsupdate.location  = New-Object System.Drawing.Point(24,142)
