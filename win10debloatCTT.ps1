@@ -451,7 +451,7 @@ $onservices.width     = 300
 $onservices.height    = 30
 $onservices.location  = New-Object System.Drawing.Point(24,60)
 $onservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
-$Panel5.controls.AddRange(@($offservices,$onservices))
+
 #########catupeloco#############################
 
 $Form.controls.AddRange(@($Panel1,$Panel2,$Label3,$Label15,$Panel4,$PictureBox1,$Label1,$Label4,$Panel3))
@@ -459,8 +459,9 @@ $Panel1.controls.AddRange(@($brave,$firefox,$7zip,$irfanview,$adobereader,$notep
 $Panel2.controls.AddRange(@($essentialtweaks,$backgroundapps,$cortana,$actioncenter,$darkmode,$visualfx,$onedrive,$lightmode,$removebloat,$windowssearch))
 $Panel4.controls.AddRange(@($defaultwindowsupdate,$securitywindowsupdate,$Label16,$Label17,$Label18,$Label19))
 $Panel3.controls.AddRange(@($essentialundo,$EActionCenter,$ECortana,$RBackgroundApps,$HTrayIcons,$EClipboardHistory,$ELocation,$InstallOneDrive,$yourphonefix,$reinstallbloat))
-
-
+#########catupeloco#############################
+$Panel5.controls.AddRange(@($offservices,$onservices))
+#########catupeloco#############################
 
 $brave.Add_Click({
     Write-Host "Installing Brave Browser"
