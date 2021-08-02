@@ -435,8 +435,8 @@ $reinstallbloat.Font             = New-Object System.Drawing.Font("Microsoft San
 $Panel5                          = New-Object system.Windows.Forms.Panel
 $Panel5.height                   = 179
 $Panel5.width                    = 340
-$Panel5.location                 = New-Object System.Drawing.Point(699,250)
-
+$Panel5.location                 = New-Object System.Drawing.Point(800,250)
+#$Panel4.location                 = New-Object System.Drawing.Point(699,55)
 
 $offservices           = New-Object system.Windows.Forms.Button
 $offservices.text      = "off services"
