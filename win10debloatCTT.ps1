@@ -1383,10 +1383,83 @@ $offservices.Add_Click({
 })
 
 $onservices.Add_Click({ 
-    Write-Host "Habilitando servicios"
+Write-Host "Habilitando servicios"
+    Write-Host "Enabling mpssvc service..."
+	Set-Service "mpssvc" -StartupType Automatic
+	Start-Service "mpssvc" -WarningAction SilentlyContinue
+	Write-Host "Enabling WinDefend service..."
+	Set-Service "WinDefend" -StartupType Manual
+	Start-Service "WinDefend" -WarningAction SilentlyContinue
+	Write-Host "Enabling Fax service..."
+	Set-Service "Fax" -StartupType Manual
+	Start-Service "Fax" -WarningAction SilentlyContinue
+	Write-Host "Enabling lmhosts service..."
+	Set-Service "lmhosts" -StartupType Manual
+	Start-Service "lmhosts" -WarningAction SilentlyContinue
+	Write-Host "Enabling iphlpsvc service..."
+	Set-Service "iphlpsvc" -StartupType Automatic
+	Start-Service "iphlpsvc" -WarningAction SilentlyContinue
+	Write-Host "Enabling CscService service..."
+	Set-Service "CscService" -StartupType Manual
+	Start-Service "CscService" -WarningAction SilentlyContinue
+	Write-Host "Enabling bthserv service..."
+	Set-Service "bthserv" -StartupType Manual
+	Start-Service "bthserv" -WarningAction SilentlyContinue
+    Write-Host "Enabling Spooler service..."
+	Set-Service "Spooler" -StartupType Automatic
+	Start-Service "Spooler" -WarningAction SilentlyContinue
+    Write-Host "Enabling SessionEnv service..."
+	Set-Service "SessionEnv" -StartupType Manual
+	Start-Service "SessionEnv" -WarningAction SilentlyContinue
+    Write-Host "Enabling TermService service..."
+	Set-Service "TermService" -StartupType Automatic
+	Start-Service "TermService" -WarningAction SilentlyContinue
+	Write-Host "Enabling wisvc service..."
+	Set-Service "wisvc" -StartupType Manual
+	Start-Service "wisvc" -WarningAction SilentlyContinue
+	Write-Host "Enabling lfsvc service..."
+	Stop-Service "lfsvc" -WarningAction SilentlyContinue
+	Set-Service "lfsvc" -StartupType Manual
+	Write-Host "Enabling seclogon service..."
+	Set-Service "seclogon" -StartupType Manual
+	Start-Service "seclogon" -WarningAction SilentlyContinue
+	Write-Host "Enabling TabletInputService service..."
+	Set-Service "TabletInputService" -StartupType Manual
+	Start-Service "TabletInputService" -WarningAction SilentlyContinue
+	Write-Host "Enabling CscService service..."
+	Set-Service "CscService" -StartupType Manual
+	Start-Service "CscService" -WarningAction SilentlyContinue
+	Write-Host "Enabling WbioSrvc service..."
+	Set-Service "WbioSrvc" -StartupType Manual
+	Start-Service "WbioSrvc" -WarningAction SilentlyContinue
 	
+	Write-Host "Enabling RemoteRegistry service..."
+	Stop-Service "RemoteRegistry" -WarningAction SilentlyContinue
+	Set-Service "RemoteRegistry" -StartupType Disabled
+	Write-Host "Enabling ALG service..."
+	Stop-Service "ALG" -WarningAction SilentlyContinue
+	Set-Service "ALG" -StartupType Disabled
+	Write-Host "Enabling SCardSvr service..."
+	Stop-Service "SCardSvr" -WarningAction SilentlyContinue
+	Set-Service "SCardSvr" -StartupType Disabled
+	Write-Host "Enabling stisvc service..."
+	Stop-Service "stisvc" -WarningAction SilentlyContinue
+	Set-Service "stisvc" -StartupType Disabled
+	Write-Host "Enabling wscsvc service..."
+	Stop-Service "wscsvc" -WarningAction SilentlyContinue
+	Set-Service "wscsvc" -StartupType Disabled
+	Write-Host "Enabling DiagTrack service..."
+	Stop-Service "DiagTrack" -WarningAction SilentlyContinue
+	Set-Service "DiagTrack" -StartupType Disabled
+	Write-Host "Enabling AJRouter service..."
+	Stop-Service "AJRouter" -WarningAction SilentlyContinue
+	Set-Service "AJRouter" -StartupType Disabled
+	Write-Host "Enabling PcaSvc service..."
+	Stop-Service "PcaSvc" -WarningAction SilentlyContinue
+	Set-Service "PcaSvc" -StartupType Disabled	
 	
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
+    
 })
 ####################catupeloco#############################
 [void]$Form.ShowDialog()
