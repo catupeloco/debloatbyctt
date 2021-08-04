@@ -315,7 +315,7 @@ $Label1.location                 = New-Object System.Drawing.Point(76,11)
 $Label1.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',24)
 
 $Label4                          = New-Object system.Windows.Forms.Label
-$Label4.text                     = "Undo 4"
+$Label4.text                     = "Undo 5"
 $Label4.AutoSize                 = $true
 $Label4.width                    = 230
 $Label4.height                   = 25
@@ -452,9 +452,10 @@ $onservices.height    = 30
 $onservices.location  = New-Object System.Drawing.Point(24,60)
 $onservices.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
-#########catupeloco#############################
 
-$Form.controls.AddRange(@($Panel1,$Panel2,$Label3,$Label15,$Panel4,$PictureBox1,$Label1,$Label4,$Panel3))
+
+$Form.controls.AddRange(@($Panel1,$Panel2,$Label3,$Label15,$Panel4,$PictureBox1,$Label1,$Label4,$Panel3,$Panel5))
+#########catupeloco#############################
 $Panel1.controls.AddRange(@($brave,$firefox,$7zip,$irfanview,$adobereader,$notepad,$gchrome,$mpc,$vlc,$powertoys,$winterminal,$vscode,$Label2,$everythingsearch,$sumatrapdf,$vscodium,$imageglass,$honeyview))
 $Panel2.controls.AddRange(@($essentialtweaks,$backgroundapps,$cortana,$actioncenter,$darkmode,$visualfx,$onedrive,$lightmode,$removebloat,$windowssearch))
 $Panel4.controls.AddRange(@($defaultwindowsupdate,$securitywindowsupdate,$Label16,$Label17,$Label18,$Label19))
