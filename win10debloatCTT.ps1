@@ -1383,7 +1383,7 @@ $offservices.Add_Click({
 })
 
 $onservices.Add_Click({ 
-Write-Host "Habilitando servicios"
+	Write-Host "Habilitando servicios"
     Write-Host "Enabling mpssvc service..."
 	Set-Service "mpssvc" -StartupType Automatic
 	Start-Service "mpssvc" -WarningAction SilentlyContinue
@@ -1432,32 +1432,31 @@ Write-Host "Habilitando servicios"
 	Write-Host "Enabling WbioSrvc service..."
 	Set-Service "WbioSrvc" -StartupType Manual
 	Start-Service "WbioSrvc" -WarningAction SilentlyContinue
-	
+	Write-Host "Enabling ALG service..."
+	Set-Service "ALG" -StartupType Manual
+	Start-Service "ALG" -WarningAction SilentlyContinue
+	Write-Host "Enabling SCardSvr service..."
+	Set-Service "SCardSvr" -StartupType Manual
+	Start-Service "SCardSvr" -WarningAction SilentlyContinue
+	Write-Host "Enabling stisvc service..."
+	Set-Service "stisvc" -StartupType Automatic
+	Start-Service "stisvc" -WarningAction SilentlyContinue
+	Write-Host "Enabling wscsvc service..."
+	Set-Service "wscsvc" -StartupType Automatic
+	Start-Service "wscsvc" -WarningAction SilentlyContinue
+	Write-Host "Enabling AJRouter service..."
+	Set-Service "AJRouter" -StartupType Manual
+	Start-Service "AJRouter" -WarningAction SilentlyContinue
+	Write-Host "Enabling PcaSvc service..."
+	Set-Service "PcaSvc" -StartupType Manual	
+	Start-Service "PcaSvc" -WarningAction SilentlyContinue
+
 	Write-Host "Enabling RemoteRegistry service..."
 	Stop-Service "RemoteRegistry" -WarningAction SilentlyContinue
 	Set-Service "RemoteRegistry" -StartupType Disabled
-	Write-Host "Enabling ALG service..."
-	Stop-Service "ALG" -WarningAction SilentlyContinue
-	Set-Service "ALG" -StartupType Disabled
-	Write-Host "Enabling SCardSvr service..."
-	Stop-Service "SCardSvr" -WarningAction SilentlyContinue
-	Set-Service "SCardSvr" -StartupType Disabled
-	Write-Host "Enabling stisvc service..."
-	Stop-Service "stisvc" -WarningAction SilentlyContinue
-	Set-Service "stisvc" -StartupType Disabled
-	Write-Host "Enabling wscsvc service..."
-	Stop-Service "wscsvc" -WarningAction SilentlyContinue
-	Set-Service "wscsvc" -StartupType Disabled
 	Write-Host "Enabling DiagTrack service..."
 	Stop-Service "DiagTrack" -WarningAction SilentlyContinue
 	Set-Service "DiagTrack" -StartupType Disabled
-	Write-Host "Enabling AJRouter service..."
-	Stop-Service "AJRouter" -WarningAction SilentlyContinue
-	Set-Service "AJRouter" -StartupType Disabled
-	Write-Host "Enabling PcaSvc service..."
-	Stop-Service "PcaSvc" -WarningAction SilentlyContinue
-	Set-Service "PcaSvc" -StartupType Disabled	
-	
 	$wshell.Popup("Operation Completed",0,"Done",0x0)
     
 })
